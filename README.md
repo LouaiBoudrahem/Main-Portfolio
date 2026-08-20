@@ -4,7 +4,7 @@ An interactive portfolio built with three.js. A castle rotates at the centre of 
 mountain scene while a dragon flies above it. Each beacon on the ring opens a
 section: projects, experience, skills, about and socials.
 
-**Live:** https://louaios.github.io/portfolio/
+**Live:** https://louaiboudrahem.github.io/Main-Portfolio/
 
 ## Built with
 
