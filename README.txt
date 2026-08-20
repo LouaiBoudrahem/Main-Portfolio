@@ -91,7 +91,9 @@ index.html, so there's no need to scroll past it.
                       names as your React constants array. Icons live in
                       assets/; a few upstream logos are solid black, so
                       white variants are used (unity-white.png,
-                      express-white.svg, social-github.svg).
+                      express-white.svg, social-github.svg). blender.png was
+                      keyed off a baked-in transparency checkerboard and
+                      cropped square; claude.png was cropped and squared.
   CONFIG.socials      the cards in the Socials section - label, handle,
                       icon, url, accent. Icons live in assets/ as white SVGs
                       so they read on the dark panel.
