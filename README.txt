@@ -106,6 +106,10 @@ index.html, so there's no need to scroll past it.
                       optional (cards without one just show no screenshot).
                       Add a project by appending to the array; drop its
                       screenshot in assets/ and point imageUrl at it.
+                      A project can also carry an `images` array. With more
+                      than one entry the card grows a thumbnail strip and
+                      clicking a thumb swaps the main shot, without following
+                      the card's link.
   CONFIG.projectsIntro  the paragraph above the cards. It's clamped to three
                       lines with a "Read more" toggle so the projects stay
                       near the top of the panel.

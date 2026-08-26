@@ -157,6 +157,20 @@ const CONFIG = {
       link: "https://github.com/Louaios/God-of-War-Axe-Throw-System-Replica"
     },
     {
+      iconUrl: "assets/unity-white.png",
+      imageUrl: "assets/ter-courtyard.jpg",
+      images: [
+        "assets/ter-courtyard.jpg",
+        "assets/ter-quiz.jpg",
+        "assets/ter-ai.jpg",
+        "assets/ter-anim.jpg"
+      ],
+      theme: "#5ab8a0",
+      name: "Jeu TER: Stealth Chase Game with CS Quizzes",
+      description: "Research placement (TER) at the CRIL laboratory, Artois University in Lens. A first person game inspired by Hello Neighbor, where an AI opponent patrols and hunts the player across a university campus while computer science quizzes are woven into the progression.",
+      link: "https://github.com/LouaiBoudrahem/Jeu-TER"
+    },
+    {
       iconUrl: "assets/python.png",
       theme: "#5a95c4",
       name: "AI Driven Personalized Nutrition Planner",
@@ -487,6 +501,14 @@ const CONFIG = {
   .prj:hover .prj-shot img{transform:scale(1.06)}
   .prj-shot::after{content:'';position:absolute;inset:0;
     background:linear-gradient(180deg,transparent 42%,rgba(10,19,14,.92))}
+  .prj-thumbs{display:flex;gap:6px;padding:8px 9px 0}
+  .th{
+    display:block;flex:1;border-radius:7px;overflow:hidden;cursor:pointer;aspect-ratio:16/10;
+    border:1px solid rgba(255,255,255,.11);opacity:.5;transition:opacity .2s,border-color .2s;
+  }
+  .th img{width:100%;height:100%;object-fit:cover;display:block}
+  .th:hover,.th:focus-visible{opacity:.85;outline:none}
+  .th.is-on{opacity:1;border-color:var(--pc)}
   .prj-body{display:block;position:relative;padding:15px 15px 15px}
   .prj-ico{
     position:absolute;right:13px;top:-19px;width:38px;height:38px;border-radius:10px;z-index:4;
@@ -495,8 +517,10 @@ const CONFIG = {
   }
   .prj-ico img{width:54%;height:54%;object-fit:contain;display:block}
   .prj.noshot .prj-ico{top:14px}
+  .prj-shot .prj-ico{top:auto;bottom:12px;right:12px}
   .prj strong{display:block;font-size:14px;font-weight:640;color:#fff;line-height:1.35;
-              margin-bottom:7px;padding-right:44px}
+              margin-bottom:7px}
+  .prj.noshot strong{padding-right:46px}
   .prj em{display:block;font-style:normal;font-size:12.5px;line-height:1.62;
           color:var(--muted);margin-bottom:12px}
   .prj-link{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:10px;
@@ -4211,9 +4235,15 @@ function sectionHTML(c){
   if (c.useProjects) h += (CONFIG.projects || []).map(p => `
     <a class="prj${p.imageUrl ? '' : ' noshot'}" style="--pc:${p.theme}"
        href="${esc(p.link)}" target="_blank" rel="noopener">
-      ${p.imageUrl ? `<span class="prj-shot"><img src="${esc(p.imageUrl)}" alt="" loading="lazy"></span>` : ''}
+      ${p.imageUrl ? `<span class="prj-shot"><img class="prj-hero" src="${esc(p.imageUrl)}" alt="" loading="lazy">
+            <span class="prj-ico"><img src="${esc(p.iconUrl)}" alt=""></span></span>` : ''}
+      ${(p.images && p.images.length > 1)
+        ? `<span class="prj-thumbs">${p.images.map((im, k) => `
+            <span class="th${k === 0 ? ' is-on' : ''}" data-src="${esc(im)}" role="button"
+                  tabindex="0" aria-label="Show screenshot ${k + 1}"><img src="${esc(im)}" alt="" loading="lazy"></span>`).join('')}</span>`
+        : ''}
       <span class="prj-body">
-        <span class="prj-ico"><img src="${esc(p.iconUrl)}" alt=""></span>
+        ${p.imageUrl ? '' : `<span class="prj-ico"><img src="${esc(p.iconUrl)}" alt=""></span>`}
         <strong>${esc(p.name)}</strong>
         <em>${esc(p.description)}</em>
         <span class="prj-link">GitHub <i>&rarr;</i></span>
@@ -4253,6 +4283,16 @@ function buildChrome(){
   });
   document.querySelectorAll('.cpchip').forEach(b =>
     b.addEventListener('click', () => goTo(+b.dataset.i)));
+
+  document.addEventListener('click', e => {          // screenshot thumbnails
+    const th = e.target.closest('.th');
+    if (!th) return;
+    e.preventDefault(); e.stopPropagation();          // the card itself is a link
+    const card = th.closest('.prj');
+    const hero = card && card.querySelector('.prj-hero');
+    if (hero) hero.src = th.dataset.src;
+    card.querySelectorAll('.th').forEach(x => x.classList.toggle('is-on', x === th));
+  });
 
   document.addEventListener('click', e => {          // the intro's read-more toggle
     const t = e.target.closest('[data-more]');
