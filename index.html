@@ -245,7 +245,151 @@ const CONFIG = {
       body: ["The code lives on GitHub. Email is the fastest way to reach me about an alternance, a team, or freelance work. I answer everything."],
       useSocials: true
     }
-  ]
+  ],
+
+  /* ---- translations --------------------------------------------------
+     English is the source of truth above; this block only holds the
+     French overrides. Anything you leave out here simply stays English,
+     so you can translate a new project or skill whenever you add one.
+     `ui` covers the fixed interface strings, everything else mirrors the
+     shape of the config above (same keys, same array order).          */
+  i18n: {
+    fr: {
+      ui: {
+        pageTitle:  "Louai Boudrahem | Développeur de jeux vidéo",
+        hint:       "faites glisser pour tourner le château",
+        listView:   "Vue liste",
+        view3d:     "Vue 3D",
+        noGL:       "3D indisponible",
+        readMore:   "Lire la suite ",
+        showLess:   "Réduire ",
+        shot:       "Afficher la capture",
+        repo:       "GitHub",
+        footer:     "&copy; 2026 Louai BOUDRAHEM. Tous droits réservés.",
+        boot:       "chargement&nbsp;du&nbsp;monde",
+        playMusic:  "Écouter la musique",
+        muteMusic:  "Couper la musique",
+        sections:   "Sections",
+        langTitle:  "Langue"
+      },
+
+      profile: {
+        role: "Développeur de jeux vidéo",
+        links: [ { label: "GitHub" }, { label: "E-mail" } ]
+      },
+
+      projectsIntro:
+        "Développeur de jeux Unity, j'ai construit de nombreux systèmes de gameplay : des mécaniques de déplacement et de combat inspirées de titres comme Sekiro, jusqu'à des systèmes complets d'interaction avec l'environnement, comme la détection d'obstacles par raycast ou les machines à états des ennemis. J'ai créé des contrôleurs sur mesure avec le nouvel Input System d'Unity : dash, gestion de l'endurance et actions continues pilotées par l'animation. J'ai aussi développé des comportements d'IA à base de gestionnaires d'ennemis, de logiques d'attaque aléatoires et de pipelines de données en ScriptableObject reliés à des API JSON externes. Au-delà du gameplay, j'ai conçu des systèmes interactifs de simulation de croissance végétale, des mécaniques d'eau, de pH et de lumière, ainsi que du retour visuel dynamique via des shaders et la manipulation de skybox. Mes projets sont centrés sur une architecture propre, l'expérimentation et des expériences de jeu réactives et soignées.",
+
+      experiences: [
+        {
+          title: "Développement de jeux sous Unity",
+          company_name: "En autodidacte",
+          date: "2020 - Aujourd'hui",
+          points: [
+            "J'ai appris les fondamentaux du développement de jeux sous Unity — programmation en C#, mécaniques de jeu et level design — à travers des tutoriels en ligne et des projets personnels."
+          ]
+        },
+        {
+          title: "Master en développement de jeux vidéo",
+          company_name: "Université d'Artois, France",
+          date: "2021 - Aujourd'hui",
+          points: [
+            "Master en développement de jeux vidéo, axé sur le game design avancé, la programmation et les médias interactifs."
+          ]
+        },
+        {
+          title: "Science des données et apprentissage automatique",
+          company_name: "ESTIN, Algérie",
+          date: "2021 - 2025",
+          points: [
+            "Formation en science des données et apprentissage automatique : analyse statistique, visualisation de données et algorithmes de machine learning."
+          ]
+        }
+      ],
+
+      skills: [
+        { type: "Moteur de jeu" },
+        { type: "Modélisation 3D" },
+        { type: "Langage de programmation" },
+        { type: "Prompt engineering" },
+        { type: "Back-end" },
+        { type: "Gestion de versions" },
+        { type: "Gestion de versions" },
+        { type: "Base de données" },
+        { type: "Back-end" }
+      ],
+
+      socials: [
+        { label: "GitHub" },
+        { label: "E-mail" }
+      ],
+
+      projects: [
+        {
+          name: "Système de combat et de traversal inspiré de Sekiro",
+          description: "Développement d'un système complet de combat et de déplacement inspiré de Sekiro : mouvements fluides, mécaniques de combat précises et IA ennemie réactive."
+        },
+        {
+          name: "Réplique du lancer de hache de God of War",
+          description: "Reproduction de la mécanique de lancer de hache de God of War : physique réaliste, système de visée et rappel de l'arme, pour une prise en main immersive."
+        },
+        {
+          name: "Jeu TER : jeu de traque furtif avec quiz d'informatique",
+          description: "Stage de recherche (TER) au laboratoire CRIL de l'Université d'Artois à Lens. Un jeu à la première personne inspiré de Hello Neighbor, où une IA patrouille et traque le joueur sur un campus universitaire, avec des quiz d'informatique intégrés à la progression."
+        },
+        {
+          name: "Planificateur nutritionnel personnalisé par IA",
+          description: "Conception et développement d'une application mobile de planification nutritionnelle personnalisée, s'appuyant sur l'IA pour proposer des recommandations alimentaires sur mesure."
+        },
+        {
+          name: "Application de tri des déchets en réalité augmentée",
+          description: "Développement d'une application de réalité augmentée pour le tri des déchets, afin de sensibiliser à l'environnement et d'encourager des pratiques durables."
+        },
+        {
+          name: "Plus court chemin entre les villes de France",
+          description: "Application de calcul du plus court chemin entre les villes françaises, pour optimiser trajets et distances."
+        },
+        {
+          name: "Site de blog inspiré de Reddit",
+          description: "Création d'un site de blog inspiré de Reddit : contenus publiés par les utilisateurs, système de votes et fonctionnalités communautaires."
+        }
+      ],
+
+      checkpoints: [
+        {
+          label: "Accueil", kicker: "Portfolio", title: "Louai Boudrahem",
+          body: [
+            "<strong>Développeur de jeux vidéo.</strong> Je conçois des jeux complets mêlant combat, déplacement et IA, ainsi que les systèmes qui les font tourner.",
+            "Faites glisser le château pour le faire pivoter. Chaque balise de l'anneau est une section."
+          ]
+        },
+        {
+          label: "Projets", kicker: "Travaux choisis", title: "Ce que j'ai réalisé"
+        },
+        {
+          label: "Parcours", kicker: "Le chemin parcouru", title: "Expérience"
+        },
+        {
+          label: "Compétences", kicker: "Boîte à outils", title: "Ce avec quoi je travaille",
+          body: ["La stack vers laquelle je me tourne au quotidien. Le moteur de jeu d'abord, avec le back-end et l'outillage qui vont avec."]
+        },
+        {
+          label: "À propos", kicker: "Qui se cache derrière", title: "Bonjour, je suis Louai \u{1F44B}",
+          body: [
+            "Étudiant spécialisé en <strong>intelligence artificielle et science des données</strong>. Passionné de développement de jeux, je crée des jeux complets qui combinent combat, déplacement et IA.",
+            "Je conçois des mécaniques comme le dash, les systèmes d'endurance et des frameworks de combat. Je travaille avec le nouvel Input System, les ScriptableObjects et C# pour bâtir un gameplay fluide et optimisé.",
+            "En parallèle, j'apprends le <strong>prompt engineering</strong>, en particulier avec Claude, et je m'en sers comme d'un outil de travail à part entière pour construire, déboguer et itérer.",
+            "<strong>Je recherche actuellement une alternance</strong> en programmation gameplay ou en IA appliquée, pour contribuer à une base de code de production en parallèle de mes études."
+          ]
+        },
+        {
+          label: "Réseaux", kicker: "Me trouver", title: "Réseaux",
+          body: ["Le code vit sur GitHub. L'e-mail reste le moyen le plus rapide de me joindre pour une alternance, une équipe ou une mission freelance. Je réponds à tout."]
+        }
+      ]
+    }
+  }
 };
 </script>
 
@@ -528,6 +672,31 @@ const CONFIG = {
   .prj-link i{font-style:normal;transition:transform .22s}
   .prj:hover .prj-link i{transform:translateX(4px)}
 
+  /* ---------- language switch (sits just above the sound button) ---------- */
+  #langSwitch{
+    position:fixed;left:24px;bottom:76px;z-index:6;display:flex;align-items:center;gap:2px;
+    padding:3px;border-radius:999px;cursor:default;
+    border:1px solid var(--line);background:rgba(12,24,17,.6);backdrop-filter:blur(8px);
+    opacity:.72;transition:.22s;
+  }
+  #langSwitch:hover,#langSwitch:focus-within{
+    opacity:1;border-color:var(--leaf);box-shadow:0 0 22px rgba(134,201,110,.3);transform:translateY(-1px);
+  }
+  #langSwitch button{
+    font-family:var(--mono);font-size:10px;line-height:1;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--muted);background:none;border:0;padding:6px 10px;border-radius:999px;cursor:pointer;
+    transition:.2s;
+  }
+  #langSwitch button:hover{color:#fff}
+  #langSwitch button[aria-pressed="true"]{
+    color:#fff;background:rgba(134,201,110,.16);box-shadow:inset 0 0 0 1px var(--line);
+  }
+  #langSwitch button:focus-visible{outline:1px solid var(--leaf);outline-offset:2px}
+  @media (max-width:900px){
+    #langSwitch{left:10px;bottom:80px}
+    #langSwitch button{padding:5px 8px;font-size:9.5px;letter-spacing:.1em}
+  }
+
   @media (prefers-reduced-motion:reduce){*{transition-duration:.01ms !important}}
 </style>
 </head>
@@ -548,9 +717,13 @@ const CONFIG = {
 <div id="hint" class="hud">drag to turn the castle</div>
 <nav id="cpnav" class="hud" aria-label="Sections"></nav>
 <main id="listview"></main>
-<footer id="footer">&copy; 2025 Louai BOUDRAHEM. All rights reserved.</footer>
+<footer id="footer">&copy; 2026 Louai BOUDRAHEM. All rights reserved.</footer>
 <button class="iconbtn" id="soundBtn" type="button" aria-pressed="false" title="Play music">
   <img id="soundIcon" src="assets/soundoff.png" alt="Toggle music"></button>
+<div id="langSwitch" role="group" aria-label="Language">
+  <button type="button" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+</div>
 
 
 <!-- ══ bundled three.js r128, generated. Don't edit. To slim this file down,
@@ -4204,11 +4377,99 @@ const N   = CPS.length;
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const TAU = Math.PI * 2;
 
+/* ---------- languages ----------------------------------------------------
+   English lives in CONFIG; CONFIG.i18n.fr holds the French overrides.
+   BASE is a frozen copy of the English content, so switching back and forth
+   is always a reset-then-overlay and never accumulates. Objects are patched
+   in place so live references (CPS) keep pointing at the right things.   */
+const LANGS = ['en', 'fr'];
+const UI_EN = {
+  pageTitle: document.title,
+  hint:      'drag to turn the castle',
+  listView:  'List view',
+  view3d:    '3D view',
+  noGL:      '3D unavailable',
+  readMore:  'Read more ',
+  showLess:  'Show less ',
+  shot:      'Show screenshot',
+  repo:      'GitHub',
+  footer:    '&copy; 2026 Louai BOUDRAHEM. All rights reserved.',
+  boot:      'loading&nbsp;world',
+  playMusic: 'Play music',
+  muteMusic: 'Mute music',
+  sections:  'Sections',
+  langTitle: 'Language'
+};
+const TRANSLATABLE = ['profile','projectsIntro','experiences','skills','socials','projects','checkpoints'];
+const cloneJSON = o => JSON.parse(JSON.stringify(o));
+const BASE = (() => { const o = {}; TRANSLATABLE.forEach(k => { if (k in CONFIG) o[k] = cloneJSON(CONFIG[k]); }); return o; })();
+
+let LANG = 'en', UI = UI_EN;
+
+function deepApply(dst, src){
+  if (!src || typeof src !== 'object' || !dst) return;
+  Object.keys(src).forEach(k => {
+    const v = src[k];
+    if (Array.isArray(v)){
+      if (!Array.isArray(dst[k])){ dst[k] = cloneJSON(v); return; }
+      v.forEach((item, i) => {
+        if (item && typeof item === 'object' && dst[k][i] && typeof dst[k][i] === 'object') deepApply(dst[k][i], item);
+        else dst[k][i] = item;
+      });
+    } else if (v && typeof v === 'object'){
+      if (!dst[k] || typeof dst[k] !== 'object') dst[k] = cloneJSON(v);
+      else deepApply(dst[k], v);
+    } else {
+      dst[k] = v;
+    }
+  });
+}
+
+function applyLang(lang, rerender){
+  LANG = LANGS.indexOf(lang) >= 0 ? lang : 'en';
+  deepApply(CONFIG, BASE);                                   // back to English
+  const pack = (CONFIG.i18n || {})[LANG] || {};
+  UI = Object.assign({}, UI_EN, pack.ui || {});
+  TRANSLATABLE.forEach(k => { if (pack[k]) deepApply(CONFIG[k] !== undefined ? CONFIG : {}, { [k]: pack[k] }); });
+
+  document.documentElement.lang = LANG;
+  document.title = UI.pageTitle;
+  const hint = $('#hint');     if (hint) hint.textContent = UI.hint;
+  const foot = $('#footer');   if (foot) foot.innerHTML  = UI.footer;
+  const bootTxt = document.querySelector('#boot > div'); if (bootTxt) bootTxt.innerHTML = UI.boot;
+  const nav = $('#cpnav');     if (nav) nav.setAttribute('aria-label', UI.sections);
+  const sw = $('#langSwitch');
+  if (sw){
+    sw.setAttribute('aria-label', UI.langTitle);
+    sw.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.lang === LANG)));
+  }
+  paintSound();
+  try { localStorage.setItem('portfolio-lang', LANG); } catch(_){}
+
+  if (rerender){
+    const wasOpen = popOpen, at = active;
+    buildChrome();
+    if (wasOpen && at >= 0) openPop(at);
+  }
+}
+
+function initLang(){
+  let saved = null;
+  try { saved = localStorage.getItem('portfolio-lang'); } catch(_){}
+  if (!saved) saved = (navigator.language || 'en').toLowerCase().indexOf('fr') === 0 ? 'fr' : 'en';
+  const sw = $('#langSwitch');
+  if (sw) sw.addEventListener('click', e => {
+    const b = e.target.closest('button[data-lang]');
+    if (b && b.dataset.lang !== LANG) applyLang(b.dataset.lang, true);
+  });
+  applyLang(saved, false);
+}
+
 /* ---------- content rendering ---------- */
 function sectionHTML(c){
   let h = `<div class="kicker">${esc(c.kicker)}</div><div class="ptitle">${esc(c.title)}</div>`;
   if (c.intro) h += `<p class="lede clamped" id="lede">${esc(CONFIG.projectsIntro)}</p>
-      <button class="moretog" data-more>Read more <i>&darr;</i></button>`;
+      <button class="moretog" data-more>${esc(UI.readMore)}<i>&darr;</i></button>`;
   (c.body || []).forEach(p => h += `<p>${p}</p>`);
   if (c.useExperience) h += `<div class="explist">` + (CONFIG.experiences || []).map((x, i) => `
     <article class="exp reveal ${i % 2 ? 'from-right' : 'from-left'}" style="--delay:${i * 120}ms">
@@ -4240,13 +4501,13 @@ function sectionHTML(c){
       ${(p.images && p.images.length > 1)
         ? `<span class="prj-thumbs">${p.images.map((im, k) => `
             <span class="th${k === 0 ? ' is-on' : ''}" data-src="${esc(im)}" role="button"
-                  tabindex="0" aria-label="Show screenshot ${k + 1}"><img src="${esc(im)}" alt="" loading="lazy"></span>`).join('')}</span>`
+                  tabindex="0" aria-label="${esc(UI.shot)} ${k + 1}"><img src="${esc(im)}" alt="" loading="lazy"></span>`).join('')}</span>`
         : ''}
       <span class="prj-body">
         ${p.imageUrl ? '' : `<span class="prj-ico"><img src="${esc(p.iconUrl)}" alt=""></span>`}
         <strong>${esc(p.name)}</strong>
         <em>${esc(p.description)}</em>
-        <span class="prj-link">GitHub <i>&rarr;</i></span>
+        <span class="prj-link">${esc(UI.repo)} <i>&rarr;</i></span>
       </span>
     </a>`).join('');
   (c.cards || []).forEach(k => {
@@ -4268,7 +4529,8 @@ function buildChrome(){
   $('#brandRole').textContent = CONFIG.profile.role;
   $('#toplinks').innerHTML =
     CONFIG.profile.links.map(l => `<a class="chip" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join('')
-    + `<button class="chip" id="listToggle" aria-pressed="false">List view</button>`;
+    + `<button class="chip" id="listToggle" aria-pressed="${document.body.classList.contains('listmode')}">${
+        esc(document.body.classList.contains('listmode') ? UI.view3d : UI.listView)}</button>`;
   $('#cpnav').innerHTML = CPS.map((c,i) =>
     `<button class="chip cpchip" data-i="${i}" style="--dot:${c.accent}">${esc(c.label)}</button>`).join('');
   $('#listview').innerHTML = CPS.map(c =>
@@ -4277,12 +4539,15 @@ function buildChrome(){
 
   $('#listToggle').addEventListener('click', e => {
     const on = document.body.classList.toggle('listmode');
-    e.currentTarget.textContent = on ? '3D view' : 'List view';
+    e.currentTarget.textContent = on ? UI.view3d : UI.listView;
     e.currentTarget.setAttribute('aria-pressed', String(on));
     if (!on) window.scrollTo(0,0);
   });
   document.querySelectorAll('.cpchip').forEach(b =>
     b.addEventListener('click', () => goTo(+b.dataset.i)));
+
+  if (buildChrome.bound) return;                     // document-level handlers, bind once
+  buildChrome.bound = true;
 
   document.addEventListener('click', e => {          // screenshot thumbnails
     const th = e.target.closest('.th');
@@ -4301,7 +4566,7 @@ function buildChrome(){
     if (!p) return;
     const open = p.classList.toggle('clamped') === false;
     t.classList.toggle('open', open);
-    t.firstChild.nodeValue = open ? 'Show less ' : 'Read more ';
+    t.firstChild.nodeValue = open ? UI.showLess : UI.readMore;
   });
 }
 
@@ -4309,6 +4574,7 @@ function buildChrome(){
 let renderer, scene, camera, worldGroup, dragonRoot, mixer;
 let actIdle = null, actFly = null, solo = null, flying = false, turb = 0;
 let markers = [], running = true, ready = false;
+let paintSound = () => {};                       // replaced by initAudio once the button is live
 
 const V3 = (x,y,z) => new THREE.Vector3(x,y,z);
 const cpAngle = i => (i / N) * TAU;              // resting angle of checkpoint i
@@ -4858,8 +5124,9 @@ function initAudio(){
   function paint(on){
     icon.src = on ? 'assets/soundon.png' : 'assets/soundoff.png';
     btn.setAttribute('aria-pressed', String(on));
-    btn.title = on ? 'Mute music' : 'Play music';
+    btn.title = on ? UI.muteMusic : UI.playMusic;
   }
+  paintSound = () => paint($('#soundBtn') && $('#soundBtn').getAttribute('aria-pressed') === 'true');
   paint(false);
 
   a.addEventListener('playing', () => paint(true));
@@ -4891,13 +5158,14 @@ function initAudio(){
 
 /* ---------- boot ---------- */
 async function boot(){
+  initLang();
   buildChrome();
 
   const gl = (() => { try { return !!document.createElement('canvas').getContext('webgl'); } catch(_){ return false; } })();
   if (!window.THREE || !gl){
     document.body.classList.add('listmode');
     $('#boot').classList.add('gone');
-    $('#listToggle').textContent = '3D unavailable';
+    $('#listToggle').textContent = UI.noGL;
     return;
   }
 
